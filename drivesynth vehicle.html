@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drivesynth Vehicles</title>
+  <link href="https://fonts.cdnfonts.com/css/avenir-next" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Avenir Next', sans-serif;
+      background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%), url('https://i.pinimg.com/736x/6f/58/d1/6f58d1670a14ab537acb071cd07f435a.jpg');
+      background-blend-mode: overlay;
+      background-size: cover;
+      color: #E0FFFF;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 1rem;
+      filter: drop-shadow(0 0 10px #00FFFF);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #00FFFF;
+      text-shadow: 0 0 10px #00FFFF;
+    }
+
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .vehicle-card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border: 1px solid #00FFFF;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px #00FFFF;
+      text-align: center;
+    }
+
+    .vehicle-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .vehicle-card h2 {
+      color: #00FFFF;
+      margin-top: 0.5rem;
+    }
+
+    .price-button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background-color: #00FFFF;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .price-button:hover {
+      transform: scale(1.05);
+      background-color: #FF00FF;
+      color: white;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 2rem;
+      color: #ccc;
+    }
+  </style>
+  <script>
+    function showPrice(price) {
+      alert("Futuristic Vehicle Price: $" + price);
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Drivesynth Logo" class="logo" />
+    <h1>Futuristic Vehicles</h1>
+  </header>
+
+  <section class="vehicles-grid">
+    <div class="vehicle-card">
+      <img src="https://i.pinimg.com/736x/20/df/3f/20df3f76dd5ef499bb82d7a896bbe6f2.jpg" alt="Synth Car 01">
+      <h2>Synth Model X</h2>
+      <button class="price-button" onclick="showPrice('89,900')">View Price</button>
+    </div>
+    <div class="vehicle-card">
+      <img src="https://i.pinimg.com/1200x/7a/05/aa/7a05aa9b098bb0c45ce3d9c42482e90b.jpg" alt="Synth Car 02">
+      <h2>Synth Racer 5</h2>
+      <button class="price-button" onclick="showPrice('109,000')">View Price</button>
+    </div>
+    <div class="vehicle-card">
+      <img src="https://i.pinimg.com/1200x/e3/df/56/e3df5676271c40b736098b25dd7b6bfb.jpg" alt="Synth Car 03">
+      <h2>Eco Drift</h2>
+      <button class="price-button" onclick="showPrice('74,500')">View Price</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Drivesynth Corporation. All futuristic rights reserved.</p>
+  </footer>
+</body>
+</html>

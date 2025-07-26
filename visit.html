@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit - TOYOTA Drivesynth</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      color: #C0C0C0;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid #00BFFF;
+    }
+
+    header img {
+      height: 50px;
+      cursor: pointer;
+    }
+
+    nav a {
+      color: #FF3333;
+      margin-left: 20px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #FFA500;
+    }
+
+    .hero {
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px;
+    }
+
+    .hero h1 {
+      color: #00BFFF;
+      font-size: 48px;
+      text-shadow: 0 0 10px #00BFFF;
+    }
+
+    .hero p {
+      color: #ccc;
+      max-width: 800px;
+      margin-top: 20px;
+    }
+
+    .icon-section {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .icon-section img {
+      width: 100px;
+      filter: drop-shadow(0 0 10px #00BFFF);
+      transition: transform 0.3s;
+    }
+
+    .icon-section img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+    }
+
+    .loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .neuro-loader {
+      border: 5px solid #444;
+      border-top: 5px solid #00BFFF;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="neuro-loader"></div>
+  </div>
+
+  <header>
+    <img src="logo.png" alt="Drivesynth Logo" onclick="location.reload()">
+    <nav>
+      <a href="C:\Users\GERSON\Desktop\toyota drivesynth\ttoyota.html">Home</a>
+      <a href="file:///C:/Users/GERSON/Desktop/toyota%20drivesynth/drivesynth%20vehicle.html">Vehicles</a>
+      <a href="file:///C:/Users/GERSON/Desktop/toyota%20drivesynth/social%20media.html">Social Media</a>
+      <a href="#">Get to Know Us</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="hero">
+    <div>
+      <h1>TOYOTA Drivesynth</h1>
+      <p>
+        Drivesynth es una línea de vehículos diseñada para redefinir el futuro de la movilidad automotriz. Con ingeniería avanzada, estética futurista y tecnología de neurointeligencia, Drivesynth conecta la innovación con el confort y la confianza del usuario moderno. 
+        Más que una marca, Drivesynth simboliza una visión progresiva, donde la velocidad se une a la conciencia, y el diseño se transforma en experiencia inmersiva.
+      </p>
+    </div>
+  </div>
+
+  <div class="icon-section">
+    <img src="C:\Users\GERSON\Desktop\toyota drivesynth\6c00b203ae48a5ced9e35fd31971e93d-removebg-preview.png" alt="Auto 1">
+    <img src="C:\Users\GERSON\Desktop\toyota drivesynth\2117756e00d8eff659e5b926dc1d7c4e-removebg-preview.png" alt="Auto 2">
+    <img src="C:\Users\GERSON\Desktop\toyota drivesynth\cf4a72919f304604bf6a940f97cdc7b8-removebg-preview.png" alt="Auto 3">
+    <img src="C:\Users\GERSON\Desktop\toyota drivesynth\394ef0ca2aa3557c0250b05e87e4413b-removebg-preview.png" alt="Auto 4">
+  </div>
+
+  <footer>
+    <div><strong>© 2025 TOYOTA Drivesynth</strong></div>
+    <div>All rights reserved. University project for a futuristic identity.</div>
+    <div>Design and development by Samuel Argumedo.</div>
+  </footer>
+
+  <script>
+    const backgrounds = [
+      'url("https://i.pinimg.com/736x/d0/7c/63/d07c635f67c83f26895cd361d637ed5a.jpg")',
+      'url("https://i.pinimg.com/736x/4f/72/bb/4f72bb0276d0b915fc2791961ff7ff98.jpg")',
+      'url("https://i.pinimg.com/736x/08/63/25/086325ef3cb9bd4eb29412e01eae26fa.jpg")'
+    ];
+    const hero = document.getElementById('hero');
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % backgrounds.length;
+      hero.style.backgroundImage = backgrounds[index];
+    }, 10000); // cada 10 segundos cambia
+
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
